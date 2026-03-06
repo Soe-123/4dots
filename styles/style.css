@@ -1,0 +1,44 @@
+.dots-container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
+}
+
+
+.dot {
+    position: relative;
+    width: calc((100vw - 50px)/4);
+    height: calc((100vw - 50px)/4);
+    position: relative;
+    aspect-ratio: 1/1 !important;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot p {
+    position: absolute;
+    color: white;
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    .dots-container {
+    flex-wrap: wrap;
+    align-content: center;
+    }
+    
+.dot {
+    position: relative;
+    width: calc((100vw - 30px)/2);
+    height: calc((100vw - 30px)/2);
+}
+    }
