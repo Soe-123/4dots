@@ -112,20 +112,19 @@ cursor: pointer;
   margin-top: -180px;
   z-index: 1002;
   overflow: visible;
-      height: 100vh;
-    width: 100vw;
+  height: 100vh;
+  width: 100vw;
 }
 
 #boxclose {
-  float: right;
   cursor: pointer;
   color: #fff;
   font-size: 60px;
   display: inline-block;
   line-height: 0px;
   padding: 11px 3px;
-  position: absolute;
-  right: 3px;
+  position: fixed;
+  right: calc(50vw - 20px);
   top: 18px;
   z-index: 1002;
   opacity: 0.9;
@@ -151,14 +150,27 @@ cursor: pointer;
         
 .popup-content {
   background: #fff;
-  padding: 20px;
-  border-radius: 5px;
+  padding: 10px 40px;
+  border-radius: 0;
   text-align: left;
-  height: 60vh;
-  width: 60vw;
+  height: 75vh;
   position: relative;
   font-family: 'Times New Roman', Times, serif;
   font-size: 18px;
+  aspect-ratio: 4/5;
+  mix-blend-mode: screen;
+}
+
+.popup-content p{
+  line-height: 125%;
+  
+}
+
+.popup-content h2 {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 20px auto 0px auto;
+  text-align: center;
 }
 
 .popup:target {
@@ -166,11 +178,13 @@ cursor: pointer;
 }
 
 .pop-up-close {
-  position: absolute;
+  position: fixed;
   text-decoration: none;
-  top: -8px;
-  right: 10px;
-  font-size: 60px;
+  right: calc(50vw - 20px);
+  top: 0;
+  font-size: 62px;
+  color:#fff;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 1000px) {
@@ -188,6 +202,41 @@ cursor: pointer;
 
 .dot a {
     font-size: 3.8vw;
+}
+
+.popup-content h2 {
+  font-size: 24px;
+}
+}
+
+@media screen and (max-width: 650px) {
+
+body.vp-center {
+  align-items: top;
+}
+
+#light {
+  margin-left: -50%;
+  margin-top: -180px;
+  z-index: 1002;
+  overflow: visible;
+  height: 100vh;
+  width: 100vw;
+}
+
+#boxclose {
+  right: 3px;
+  top: 24px;
+}
+
+.popup-content {
+  width: calc(100vw - 40px);
+  height: auto;
+  position: relative;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  aspect-ratio: 4/5;
+  mix-blend-mode: screen;
 }
     }
 
