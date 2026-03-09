@@ -1,12 +1,7 @@
 var color = new Array();
-color[0] = "#3364a0";
-color[1] = "#ff4800";
-color[2] = "#5d5d5d";
-color[3] = "#140b4c";
-color[4] = "#70563a";
-color[5] = "#3c94f9";
-color[6] = "#d9c403";
-color[7] = "#371345";
+
+
+color[0] = "#000000";
 
 
 function changeColor()
