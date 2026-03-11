@@ -238,11 +238,6 @@ body.vp-center {
   width: 100vw;
 }
 
-#boxclose {
-  right: 3px;
-  top: 24px;
-}
-
 .popup-content {
   width: calc(100vw - 40px);
   height: auto;
