@@ -51,8 +51,21 @@ main {
 }
 
 .dot:hover {
-    mix-blend-mode: multiply;
+    mix-blend-mode: overlay;
+}
 
+.dot:first-of-type:hover {
+    mix-blend-mode: screen;
+
+}
+
+.dot:first-of-type {
+  mix-blend-mode: normal;
+  background-color: rgb(39, 60, 255);
+}
+
+.dot:first-of-type a {
+color: rgb(255, 157, 0);
 }
 
 .dot a {
@@ -67,7 +80,7 @@ main {
   
 .close:hover,
 .close:focus {
-color: rgb(255, 72, 0);
+color: rgb(255, 157, 0);
 text-decoration: none;
 cursor: pointer;
 }
@@ -118,7 +131,7 @@ cursor: pointer;
 
 #boxclose {
   cursor: pointer;
-  color: #fff;
+  color: rgb(255, 157, 0);
   font-size: 60px;
   display: inline-block;
   line-height: 0px;
@@ -150,19 +163,20 @@ cursor: pointer;
         
 .popup-content {
   background: #fff;
-  padding: 10px 40px;
+  padding: 15px 50px 20px 50px;
   border-radius: 0;
   text-align: left;
-  height: 75vh;
+  height: auto;
   position: relative;
   font-family: 'Times New Roman', Times, serif;
-  font-size: 18px;
-  aspect-ratio: 4/5;
+  font-size: 24px;
   mix-blend-mode: screen;
+  max-width: 600px;
 }
 
 .popup-content p{
   line-height: 125%;
+  color: rgb(39, 60, 255);
   
 }
 
@@ -183,7 +197,7 @@ cursor: pointer;
   right: calc(50vw - 20px);
   top: 0;
   font-size: 62px;
-  color:#fff;
+  color: rgb(255, 157, 0);
   font-weight: bold;
 }
 
@@ -235,8 +249,7 @@ body.vp-center {
   position: relative;
   font-family: 'Times New Roman', Times, serif;
   font-size: 18px;
-  aspect-ratio: 4/5;
-  mix-blend-mode: screen;
+
 }
     }
 
