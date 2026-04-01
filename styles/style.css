@@ -4,9 +4,9 @@
 
 
 @font-face{
-    font-family:"KMR-Waldenburg-Halbfett";
-    src:url("../fonts/KMR-Waldenburg-Halbfett.woff2") format("woff2"),
-    url("../fonts/KMR-Waldenburg-Halbfett.woff") format("woff");
+    font-family:"Pitch-Medium";
+    src:url("../fonts/Pitch-Medium.woff2") format("woff2"),
+    url("../fonts/Pitch-Medium.woff") format("woff");
 }
 
 
@@ -14,7 +14,7 @@
 body {
     font-size: 100%;
     width: 100vw;
-    min-height: 100vh;
+    height: 100svh;
     /* mobile viewport bug fix */
     min-height: -webkit-fill-available;
 }
@@ -27,7 +27,7 @@ main {
     display: flex;
     flex-direction: row;
     width: 100vw;
-    height: 100vh;
+    height: 100svh;
     gap: 10px;
     padding: 10px;
     align-items: center;
@@ -73,15 +73,15 @@ color: rgb(255, 157, 0);
     color: rgb(0, 0, 0);
     font-size: 1.8vw;
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Pitch-Medium', 'Courier New', Courier, monospace;
     text-decoration: none;
+    line-height: 100%;
 }
 
   
 .close:hover,
 .close:focus {
 color: rgb(255, 157, 0);
-text-decoration: none;
 cursor: pointer;
 }
 
@@ -95,9 +95,6 @@ cursor: pointer;
   .vimeo {
     height: 100vh;
     padding: 10%;
-  }
-
-  iframe {
   }
 
   #fade {
@@ -131,28 +128,30 @@ cursor: pointer;
 
 #boxclose {
   cursor: pointer;
-  color: rgb(255, 157, 0);
-  font-size: 60px;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
   display: inline-block;
   line-height: 0px;
-  padding: 11px 3px;
+  padding: 11px 0px;
   position: fixed;
-  right: calc(50vw - 20px);
-  top: 18px;
+  right: 20px;
+  top: 10px;
   z-index: 1002;
-  opacity: 0.9;
+  opacity: 1;
+  font-family: 'Pitch-Medium', 'Courier New', Courier, monospace;
+  border-bottom: 1.5px solid white;
 }
 
 .boxclose:before {
-  content: "×";
+  content: "CLOSE";
 }
 
 #fade:hover ~ #boxclose {
   display:none;
 }
 
-.popup {
-  display: none;
+.container {
+  display: flex;
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
@@ -160,45 +159,49 @@ cursor: pointer;
   justify-content: center;
   align-items: center;
 }
-        
-.popup-content {
+
+.container-content {
   background: #fff;
-  padding: 15px 50px 20px 50px;
+  padding: 40px 50px 20px 40px;
   border-radius: 0;
   text-align: left;
   height: auto;
   position: relative;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 24px;
+  font-family: 'Pitch-Medium', 'Courier New', Courier, monospace;
+  font-size: 21px;
   mix-blend-mode: screen;
   max-width: 600px;
-}
-
-.popup-content p{
-  line-height: 125%;
   color: rgb(39, 60, 255);
-  
 }
 
-.popup-content h2 {
-  font-size: 24px;
-  font-weight: normal;
-  margin: 20px auto 0px auto;
-  text-align: center;
+
+.container-content a{
+   text-underline-offset: 2px;
+  
 }
 
 .popup:target {
   display: flex;
 }
 
-.pop-up-close {
+.about-close {
   position: fixed;
-  text-decoration: none;
-  right: calc(50vw - 20px);
-  top: 0;
-  font-size: 62px;
-  color: rgb(255, 157, 0);
-  font-weight: bold;
+  right: 20px;
+  top: 10px;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  font-family: 'Pitch-Medium', 'Courier New', Courier, monospace;
+  text-underline-offset: 3px !important;
+  padding-bottom: 3px;
+}
+
+#label {
+  position: absolute;
+  left: calc(50vw - 150px);
+  top: calc(50vh - 28px);
+	width: 400px;
+	aspect-ratio: 3/2;
+  z-index: 3000;
 }
 
 @media screen and (max-width: 1000px) {
@@ -218,11 +221,6 @@ cursor: pointer;
     font-size: 3.8vw;
 }
 
-.popup-content h2 {
-  font-size: 24px;
-}
-}
-
 @media screen and (max-width: 650px) {
 
 body.vp-center {
@@ -238,13 +236,32 @@ body.vp-center {
   width: 100vw;
 }
 
-.popup-content {
+.container-content {
   width: calc(100vw - 40px);
   height: auto;
   position: relative;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 18px;
+  font-family: 'Pitch-Medium', 'Courier New', Courier, monospace;
+  font-size: 13px;
+  line-height: 123%;
+  padding: 20px 20px 10px 30px;
+}
 
+
+#label {
+  position: absolute;
+  left: calc(50vw - 150px);
+  top: calc(50vh - 28px);
+	width: 200px;
+	aspect-ratio: 3/2;
+  z-index: 3000;
+}
+
+.about-close {
+  top: 18px;
+}
+
+#boxclose {
+  top: 18px;
 }
     }
 
